@@ -1,0 +1,6 @@
+<div class="ui secondary pointing menu">
+    <div class="right menu">
+      <app-menu-item *ngFor="let item of menuItems" [item]="item" (select)="select.emit($event)" [menuSelectedItem]="menuSelectedItem">
+      </app-menu-item>
+    </div>
+  </div>

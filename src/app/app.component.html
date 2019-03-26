@@ -1,21 +1,9 @@
-<div class="container"></div>
-<div class="ui secondary pointing menu">
-  <div class="right menu">
-    <a class="active item">
-      Catalog
-    </a>
-    <a class="item">
-      Orders
-    </a>
-    <a class="item">
-      Friends
-    </a>
-      <a class="ui item">
-      Logout
-    </a>
-  </div>
-</div>
+
+<div class="ui container">
+<app-menu-list [menuItems]="menuItems$| async" [menuSelectedItem]="menuSelected$ | async" (select)="onSelectMenu($event)">
+  </app-menu-list>
 <div class="ui segment">
-  <p></p>
+  <p><router-outlet></router-outlet></p>
 </div>
-<router-outlet></router-outlet>
+
+</div>
