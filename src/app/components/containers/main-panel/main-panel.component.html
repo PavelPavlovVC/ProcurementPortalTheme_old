@@ -1,0 +1,19 @@
+<div [ngSwitch]="menuSelectedComponent.name">
+  <div *ngSwitchDefault>
+    <div class="ui segment">
+      <div class="ui internally celled grid">
+        <div class="ten wide column">
+          <app-left-panel [menuSelectedComponent]="menuSelectedComponent"></app-left-panel>
+        </div>
+        <div class="five wide column">
+          <app-right-panel></app-right-panel>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngSwitchCase="'For approval'">
+    <div class="ui segment">
+      {{menuSelectedComponent.name}}
+    </div>
+  </div>
+</div>

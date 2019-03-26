@@ -1,0 +1,6 @@
+<div class="ui secondary pointing menu">
+  <div class="right menu">
+    <app-header-menu-item *ngFor="let component of components" [component]="component" (select)="select.emit($event)" [menuSelectedComponent]="menuSelectedComponent">
+    </app-header-menu-item>
+  </div>
+</div>

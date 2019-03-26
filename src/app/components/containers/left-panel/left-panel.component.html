@@ -1,0 +1,16 @@
+<div [ngSwitch]="menuSelectedComponent.name">
+    <div *ngSwitchDefault>
+        <h1>{{menuSelectedComponent.name}}</h1>
+    </div>
+    <div *ngSwitchCase="'Catalog'">
+        <div class="ui segment">
+            {{menuSelectedComponent.name}}
+            <app-catalog></app-catalog>
+        </div>
+    </div>
+    <div *ngSwitchCase="'Orders'">
+        <div class="ui segment">
+            {{menuSelectedComponent.name}}
+        </div>
+    </div>
+</div>
